@@ -15,13 +15,37 @@ project 1 - A Random Quote Generator
   Use console.log() to log your array of quotes to the console.
 ***/
 
+var quotes = [
+  {
+    quote : 'Talk is cheap, show me the code',
+    source : 'Linus Torvalds',
+    citation : 'Created Linux OS'
+  },
+  {
+    quote : 'Be yourself, everyone else is already taken',
+    source : 'Oscar Wilde'
+  },
+  {
+    quote : 'Be the change that you wish to see in the world',
+    source : 'Mahatma Gandhi',
+    year : 1940
+  },
+  {
+    quote : 'It\'s not a bug - it\'s an undocumented feature',
+    source : 'Anonymous'
+  },
+  {
+    quote : 'Good deeds should be done with intention, not for attention',
+    source : 'Acho'
+  }
+];
 
-
+console.log(quotes);
 
 /***
   Create the `getRandomQuote` function to:
    - Create a variable to store a random number 
-   - Cse the random number to `return` a random quote object from the `quotes` array.
+   - Use the random number to `return` a random quote object from the `quotes` array.
 ***/
 
 
