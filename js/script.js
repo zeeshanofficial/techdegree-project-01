@@ -48,9 +48,13 @@ console.log(quotes);
    - Use the random number to `return` a random quote object from the `quotes` array.
 ***/
 
+var randomNum;
 
-
-
+function getRandomQuote(){
+  randomNum = Math.floor(Math.random()* quotes.length);
+  return quotes[randomNum];
+}
+console.log(getRandomQuote());
 /***
   Create the `printQuote` function to: 
    - Call the `getRandomQuote` function and assign it to a variable.
@@ -63,8 +67,12 @@ console.log(quotes);
    - Don't forget to close that final `p` tag.
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
-
-
+var randomNumber;
+var html = '';
+function printQuote(){
+  randomNumber = getRandomQuote();
+  html += '<p>';
+}
 
 
 /***
