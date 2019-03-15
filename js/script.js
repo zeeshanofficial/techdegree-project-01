@@ -19,24 +19,24 @@ var quotes = [
   {
     quote : 'Talk is cheap, show me the code',
     source : 'Linus Torvalds',
-    citation : 'Created Linux OS'
+    year : 1940
   },
   {
     quote : 'Be yourself, everyone else is already taken',
     source : 'Oscar Wilde'
   },
   {
-    quote : 'Be the change that you wish to see in the world',
-    source : 'Mahatma Gandhi',
-    year : 1940
+    quote : 'First, solve the problem. Then, write the code.',
+    source : 'John Johnson',
+    citation : 'https://dzone.com/articles/best-programming-jokes-amp-quotes'
   },
   {
-    quote : 'It\'s not a bug - it\'s an undocumented feature',
-    source : 'Anonymous'
+    quote : 'The happiest moment i\'ve ever felt was that moment when i discovered my ability to create.',
+    source : ' Dr. Hazem Ali'
   },
   {
-    quote : 'Good deeds should be done with intention, not for attention',
-    source : 'Acho'
+    quote : 'If I do a job in 30 minutes it’s because I spent 10 years learning how to do that in 30 minutes. You owe me for the years, not the minutes.',
+    source : '@davygreenberg'
   }
 ];
 
