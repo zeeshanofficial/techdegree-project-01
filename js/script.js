@@ -75,8 +75,8 @@ function master(){
 
 /***
   When the "Show another quote" button is clicked, the event listener 
-  below will be triggered, and it will call, or "invoke", the `printQuote` 
-  function.
+  below will be triggered, and it will call, or "invoke", the `master` 
+  function which contains 'printQuote' function
 ***/
 
 document.getElementById('loadQuote').addEventListener("click", master, false);
