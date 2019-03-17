@@ -44,7 +44,8 @@ function getRandomQuote(){
 function printQuote(){
   var randomNumber = getRandomQuote();
   var colour = () => Math.floor(Math.random() * 256);
-
+  
+  
 // the randomNumber variable is used to concatinated the p tag by pointing to key value pairs of the array object.
     var listHtml = '<p class = "quote">' + randomNumber.quote + '</p>';
     listHtml += '<p class = "source">' + randomNumber.source ; 
@@ -63,23 +64,14 @@ function printQuote(){
 //referred from w3schools, link : https://www.w3schools.com/jsref/prop_style_backgroundcolor.asp
 }
 
-function autoRefresh(){
-  var auto = setInterval( printQuote, 2000);
-}
-
-function master(){
-  var one = printQuote();
-  var two = autoRefresh();
-}
-//referred MDN docs but found it hard to grasp, got into W3schools this time again and done, link : https://www.w3schools.com/jsref/met_win_setinterval.asp
+var quoteDelay = window.setInterval( printQuote, 4000);
 
 /***
   When the "Show another quote" button is clicked, the event listener 
-  below will be triggered, and it will call, or "invoke", the `master` 
-  function which contains 'printQuote' function
+  below will be triggered, and it will call, or "invoke" 'printQuote' function
 ***/
 
-document.getElementById('loadQuote').addEventListener("click", master, false);
+document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 
 
