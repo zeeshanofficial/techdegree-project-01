@@ -30,19 +30,19 @@ var quotes = [
 ];
 
 
-var randomNum;
+
 
 //This function returns a random quote from the quotes array
 function getRandomQuote(){
-  randomNum = Math.floor(Math.random()* quotes.length);
+  var randomNum = Math.floor(Math.random()* quotes.length);
   return quotes[randomNum];
 }
 
-var randomNumber; 
+
 
 // the random quote is called by calling the function and its value is stored in a variable
 function printQuote(){
-  randomNumber = getRandomQuote();
+  var randomNumber = getRandomQuote();
 // this variable is then used to concatinated the p tag by pointing to key value pairs of the array object.
     var listHtml = '<p class = "quote">' + randomNumber.quote + '</p>';
     listHtml += '<p class = "source">' + randomNumber.source ; 
@@ -67,10 +67,10 @@ function styleHtml(){
     //referred from w3schools, link : https://www.w3schools.com/jsref/prop_style_backgroundcolor.asp
 }
 
-var myVar;
+
 function autoRefresh(){
-myVar = setInterval( styleHtml, 2000);
-myVar += setInterval( printQuote, 2000);
+var auto = setInterval( styleHtml, 2000);
+auto += setInterval( printQuote, 2000);
 }
 //referred MDN docs but found it hard to grasp, got into W3schools this time again and done, link : https://www.w3schools.com/jsref/met_win_setinterval.asp
 
