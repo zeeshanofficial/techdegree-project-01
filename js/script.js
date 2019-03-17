@@ -38,11 +38,14 @@ function getRandomQuote(){
   return quotes[randomNum];
 }
 
+
+
 var randomNumber; 
 
 // the random quote is called by calling the function and its value is stored in a variable
 function printQuote(){
   randomNumber = getRandomQuote();
+
 // this variable is then used to concatinated the p tag by pointing to key value pairs of the array object.
     var listHtml = '<p class = "quote">' + randomNumber.quote + '</p>';
     listHtml += '<p class = "source">' + randomNumber.source ; 
@@ -53,28 +56,15 @@ function printQuote(){
     }
   listHtml += '</p>';
 
-/*** listHtml is then sent to innerHTML of the quote-box div and is used to dynamically change the quotes randomly, 
- * or what we call as 'manipulating the DOM' .
-***/
-
+// the final fancy quote result, i.e listHtml is then sent to innerHTML of the quote-box div and is used to dynamically change the quotes randomly, or what we call as 'manipulating the DOM' 
   document.getElementById("quote-box").innerHTML = listHtml;
-  
 }
-
-function styleHtml(){
-    var colour = () => Math.floor(Math.random() * 256);
-    document.body.style.backgroundColor = 'rgb(' + colour() + ',' + colour() + ',' + colour() + ')'; 
-    //referred from w3schools, link : https://www.w3schools.com/jsref/prop_style_backgroundcolor.asp
-}
-
 
 /***
   When the "Show another quote" button is clicked, the event listener 
   below will be triggered, and it will call, or "invoke", the `printQuote` 
-  function.
+  function. So do not make any changes to the line of code below this 
+  comment.
 ***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-document.getElementById('loadQuote').addEventListener("click", styleHtml, false);
-
-
