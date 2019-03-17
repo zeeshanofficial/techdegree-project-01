@@ -67,6 +67,12 @@ function styleHtml(){
     //referred from w3schools, link : https://www.w3schools.com/jsref/prop_style_backgroundcolor.asp
 }
 
+var myVar;
+function autoRefresh(){
+myVar = setInterval( styleHtml, 2000);
+myVar += setInterval( printQuote, 2000);
+}
+//referred MDN docs but found it hard to grasp, got into W3schools this time again and done, link : https://www.w3schools.com/jsref/met_win_setinterval.asp
 
 /***
   When the "Show another quote" button is clicked, the event listener 
@@ -76,5 +82,6 @@ function styleHtml(){
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 document.getElementById('loadQuote').addEventListener("click", styleHtml, false);
+document.getElementById('loadQuote').addEventListener("click", autoRefresh, false);
 
 
